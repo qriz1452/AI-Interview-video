@@ -11,4 +11,6 @@ RUN apt-get update \
         && apt-get install build-essential cmake pkg-config -y \
         && pip3 install pyaudio
 RUN pip install dlib
+RUN apt-get install portaudio19-dev -y
+RUN apt-get install cmake libx11-dev -y
 RUN pip install -r requirements.txt
